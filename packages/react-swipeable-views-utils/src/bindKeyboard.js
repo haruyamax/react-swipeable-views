@@ -120,13 +120,17 @@ export default function bindKeyboard(MyComponent) {
     };
 
     handleChangeIndex = (index, indexLatest, meta) => {
-      // Is uncontrolled
-      if (this.props.index === undefined) {
-        this.setState({
-          index,
-        });
-      }
-
+//       // Is uncontrolled
+//       if (this.props.index === undefined) {
+//         this.setState({
+//           index,
+//         });
+//       }
+      
+      this.setState({
+        index,
+      });
+      
       if (this.props.onChangeIndex) {
         this.props.onChangeIndex(index, indexLatest, meta);
       }
